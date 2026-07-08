@@ -4,7 +4,7 @@ import { getApiBaseUrl } from './config/baseUrl';
 import apiRoutes from './routes/api';
 
 const app = express();
-const PORT = 8000;
+const PORT = Number(process.env.PORT || 8000);
 const MONGO_URI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/octofit_db';
 
 app.use(express.json());

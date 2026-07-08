@@ -8,7 +8,7 @@ const mongoose_1 = __importDefault(require("mongoose"));
 const baseUrl_1 = require("./config/baseUrl");
 const api_1 = __importDefault(require("./routes/api"));
 const app = (0, express_1.default)();
-const PORT = 8000;
+const PORT = Number(process.env.PORT || 8000);
 const MONGO_URI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/octofit_db';
 app.use(express_1.default.json());
 app.get('/api/health', (_req, res) => {
